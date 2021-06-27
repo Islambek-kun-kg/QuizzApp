@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.mainQuizz.MainQuizzFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_gl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.83" />
+
+    <ImageView
+        android:id="@+id/img_main_quizz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/img_quizz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_question_amount_main_quizz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="@string/question_amount"
+        android:textColor="#A9A9A9"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/left_gl"
+        app:layout_constraintTop_toBottomOf="@id/img_main_quizz" />
+
+    <TextView
+        android:id="@+id/tv_amount_main_quizz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ten"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_question_amount_main_quizz"
+        app:layout_constraintStart_toEndOf="@id/tv_question_amount_main_quizz"
+        app:layout_constraintTop_toTopOf="@id/tv_question_amount_main_quizz" />
+
+    <SeekBar
+        android:id="@+id/sk_main_quizz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:forceHasOverlappingRendering="true"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:progressTint="#BE52F2"
+        android:thumbOffset="3dp"
+        android:thumbTint="#BE52F2"
+        app:layout_constraintEnd_toStartOf="@id/right_gl"
+        app:layout_constraintStart_toStartOf="@id/left_gl"
+        app:layout_constraintTop_toBottomOf="@id/tv_question_amount_main_quizz" />
+
+    <TextView
+        android:id="@+id/tv_category_main_quizz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/category"
+        android:textColor="#A9A9A9"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/spinner_cv_category_main_quizz"
+        app:layout_constraintStart_toStartOf="@id/spinner_cv_category_main_quizz" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/spinner_cv_category_main_quizz"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="37dp"
+        android:padding="14dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="30dp"
+        app:layout_constraintEnd_toStartOf="@id/right_gl"
+        app:layout_constraintStart_toStartOf="@id/left_gl"
+        app:layout_constraintTop_toBottomOf="@id/sk_main_quizz">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_category_main_quizz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/category"
+            android:visibility="visible" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_difficulty_main_quizz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/difficulty"
+        android:textColor="#A9A9A9"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/spinner_cv_difficulty_main_quizz"
+        app:layout_constraintStart_toStartOf="@id/spinner_cv_difficulty_main_quizz" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/spinner_cv_difficulty_main_quizz"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="37dp"
+        android:padding="14dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/right_gl"
+        app:layout_constraintStart_toStartOf="@+id/left_gl"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_cv_category_main_quizz">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_dofficulty_main_quizz"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:entries="@array/difficulty"
+            android:visibility="visible" />
+    </com.google.android.material.card.MaterialCardView>
+
+<com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+app:layout_constraintTop_toBottomOf="@id/spinner_cv_difficulty_main_quizz"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:paddingVertical="13dp"
+    android:backgroundTint="#6979F8"
+    android:text="@string/start"
+    android:layout_marginTop="64dp"
+    android:layout_marginHorizontal="88dp"
+    app:cornerRadius="6dp"
+    android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
