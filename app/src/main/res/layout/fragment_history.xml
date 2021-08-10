@@ -5,8 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragments.history.HistoryFragment">
 
-    <ImageView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_history"
         android:layout_width="match_parent"
-        android:background="@color/black"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:listitem="@layout/history_item" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

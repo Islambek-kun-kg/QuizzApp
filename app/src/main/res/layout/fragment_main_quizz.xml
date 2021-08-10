@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ten"
-        android:textColor="@color/black"
+        android:textColor="@color/Black"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/tv_question_amount_main_quizz"
         app:layout_constraintStart_toEndOf="@id/tv_question_amount_main_quizz"

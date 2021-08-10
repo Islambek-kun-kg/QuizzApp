@@ -1,6 +1,76 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="titleTextColor">@color/Black</item>
+    </style>
+
+    <style name="SplashScreenTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="android:windowBackground">@drawable/activity_splash_screen</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--MainFragment-->
+
+    <style name="TextHintMainStyle">
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--HistoryFragment-->
+
+    <!-- | list_history_item-->
+    <style name="TextHistoryCategory">
+        <item name="android:textColor">@color/VeryDarkDesaturatedBlue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextHistoryCorrectAnswersAndDifficulty">
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--SettingsFragment-->
+
+    <style name="ViewDividerStyle">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:background">@color/Gray</item>
+    </style>
+
+    <style name="TextSettingsStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--QuizActivity-->
+
+    <!--list_question_item-->
+
+    <style name="TextQuestionStyles">
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginStart">30dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginEnd">30dp</item>
+        <item name="android:textColor">@color/Black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="ButtonQuestionStyles" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">5dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">#6979F8</item>
+        <item name="android:textSize">16sp</item>
+        <item name="strokeColor">#6979F8</item>
+        <item name="strokeWidth">2dp</item>
+    </style>
 
 
 </resources>
